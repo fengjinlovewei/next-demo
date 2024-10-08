@@ -1,4 +1,6 @@
 {
+  // 去掉文件夹折叠，很烦。
+  "explorer.compactFolders": false,
   // eslint主要功能设定规范,捕获不规范的错误等 美化代码或者格式化代码功能交给prettier
   "eslint.format.enable": false,
   //打开保存格式化功能(保存代码的时候自动格式化)
@@ -21,6 +23,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
-  "liveServer.settings.port": 5501,
+
+  "liveServer.settings.port": 5501, // liveServer 插件设置端口
   "tailwindCSS.rootFontSize": 75 // 单位px，根节点字号，用于提示
 }

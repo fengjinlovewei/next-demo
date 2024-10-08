@@ -4,7 +4,7 @@ const config = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
-    postCssPxToRem: {
+    'postcss-pxtorem': {
       rootValue: 75, // 设计图宽度是720的，这里就写72， 750的，就写75
       propList: ['*', '!--van-*'],
       unitPrecision: 5,
