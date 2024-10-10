@@ -4,11 +4,11 @@ import { useOptimistic } from 'react';
 import { useFormState } from 'react-dom';
 import { createToDo } from './actions';
 
-export default function Form({ todos }) {
+export default function Form({ todos }: any) {
   const [state, sendFormAction] = useFormState(createToDo, { message: '' });
 
   const [optimistiToDos, addOptimisticTodo] = useOptimistic(
-    todos.map((i) => ({ text: i })),
+    todos.map((i: any) => ({ text: i })),
     (state, newTodo) => [
       ...state,
       {
@@ -18,7 +18,7 @@ export default function Form({ todos }) {
     ],
   );
 
-  async function formAction(formData) {
+  async function formAction(formData: any) {
     // 先把最新的数据丢给 useOptimistic 的第二个参数函数，页面上添加一个带loading的元素
     addOptimisticTodo(formData.get('todo'));
     // 然后再把数据丢给 useFormState 第一个参数函数 createToDo ，然后开始异步处理中...
@@ -40,7 +40,7 @@ export default function Form({ todos }) {
         <p>{state?.message}</p>
       </form>
       <ul>
-        {optimistiToDos.map(({ text, sending }, i) => (
+        {optimistiToDos.map(({ text, sending }: any, i: number) => (
           <li key={i}>
             {text}
             {!!sending && <small> (Sending...)</small>}

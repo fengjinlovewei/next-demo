@@ -1,6 +1,13 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @font-face {
+  font-family: 'Bitstream Vera Serif Bold';
+  src: url('https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf');
+} */
 
 :root {
   --background: #ffffff;
@@ -14,10 +21,14 @@
   }
 }
 
+/* body {
+  font-family: 'Ma Shan Zheng';
+} */
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 @layer utilities {

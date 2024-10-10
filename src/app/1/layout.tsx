@@ -10,8 +10,8 @@ export default function RootLayout({ children, team, analytics }: never) {
         </div>
         <nav className='flex items-center justify-center gap-10 text-blue-600 mb-6'>
           <Link href='/'>Home</Link>
-          <Link href='/page-views'>Page Views</Link>
-          <Link href='/visitors'>Visitors</Link>
+          <Link href='/1/page-views'>Page Views</Link>
+          <Link href='/1/visitors'>Visitors</Link>
         </nav>
         <div className='flex gap-6'>
           {team}

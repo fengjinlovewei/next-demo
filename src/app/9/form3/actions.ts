@@ -10,7 +10,7 @@ export async function findToDos() {
   return data;
 }
 
-export async function createToDo(prevState, formData) {
+export async function createToDo(prevState: any, formData: any) {
   await sleep(2500);
   const todo = formData.get('todo');
   data.push(todo);
