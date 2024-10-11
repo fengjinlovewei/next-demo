@@ -19,6 +19,7 @@ export default async function Page() {
     <main>
       <h1>{title}</h1>
       <p>{desc}</p>
+      <button></button>
     </main>
   );
 }

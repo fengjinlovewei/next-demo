@@ -5,6 +5,8 @@ import cls from 'classnames';
 
 import { headers } from 'next/headers';
 
+import ClientInit from './clientInit';
+
 // 2. 实例化字体对象，设置使用子集等
 const MaShanZheng = Ma_Shan_Zheng({
   subsets: ['latin'],
@@ -37,11 +39,13 @@ function Layout({ children }: never) {
       lang='en'
       // className={cls(MaShanZheng.className, MaShanZheng.variable)}>
       className={cls(MaShanZheng.variable)}>
-      <head>{/* <script src='/static/amfe-flexible.js'></script> */}</head>
-      {/* <Script src='/amfe-flexible.js' /> */}
-      {/*  */}
-      <body>{children}</body>
-      {/* <Script src='/amfe-flexible.js' strategy='beforeInteractive' /> */}
+      <head>
+        <script src='/static/amfe-flexible.js'></script>
+      </head>
+      <body>
+        <ClientInit />
+        {children}
+      </body>
     </html>
   );
 }
